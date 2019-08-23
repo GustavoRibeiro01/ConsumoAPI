@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card *ngFor="let item of ListaCliente">
+     
+      <ion-card-content>
+        <div >
+            <p>Nome: {{item.nome}}</p>
+            <p>Cpf: {{item.cpf}}</p>
+            <p>Endereço: {{item.endereco}}</p>
+            <p>Profissão: {{item.profissao}}</p>
+            <p>Empresa: {{item.empresa}}</p>
+            <p>Sexo: {{item.sexo}}</p>
+            <p>Tag: {{item.tag}}</p>
+        </div>
+        
+      </ion-card-content>
+      <ion-button (click)="Atualizar(item)">Atualizar Cliente</ion-button>
+      <ion-button (click)="Deletar(item.id)">Deletar Cliente</ion-button>
+    </ion-card>
+    
+    <ion-button (click)="Gravar()">Gravar Cliente</ion-button>
+</ion-content>
